@@ -1,0 +1,129 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/bootstarp")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/bootstrap")
+
+</head>
+<body>
+
+    <section id="header">
+        <div class="container">
+            <div class="headerSearch">
+                search
+            </div>
+            <div class="headerContent">
+                <div class="headerLeft">
+                    <a href="#">
+                        <img src="~/Images/KKT-Logo.png" alt="KKT Qatar" />
+                    </a>
+                </div>
+                <div class="headerMenu">
+                    <nav>
+                        <ul class="nav">
+                            <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                            <li>@Html.ActionLink("About", "QatarCenter", "About")
+                                <ul>
+                                    <li>@Html.ActionLink("Qatar Centre", "QatarCenter", "About")</li>
+                                    <li>@Html.ActionLink("History of KKT", "HistoryOf_KKT", "About")</li>
+                                    <li>@Html.ActionLink("Who We Are - Staff & Health Care", "WhoWeAre", "About")</li>
+                                    <li>@Html.ActionLink("Vision, Mission & Core Values", "MissionVission", "About")</li>
+                                    <li>@Html.ActionLink("Dr Khans Message", "DrMessage", "About")</li>
+                                    <li>@Html.ActionLink("KKT® Qatar Founders Message", "FounderMessage", "About")></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Science and Technology</a>
+                                <ul>
+                                    <li><a href="#">What is KKT</a></li>
+                                    <li><a href="#">KKT Stages</a></li>
+                                    <li><a href="#">KKT Vs Alternatives</a></li>
+                                    <li><a href="#">Dedicated Systems and Technologies</a></li>
+                                    <li><a href="#">Clinical Research & Clinical Publications</a></li>
+                                    <li><a href="#">Global Affiliates and Certificates</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Ailments</a>
+                                <ul>
+                                    <li><a href="#">Neck and Back Pain</a></li>
+                                    <li><a href="#">Osteoarthritis</a></li>
+                                    <li><a href="#">Spondylitis and Spinal Degeneration</a></li>
+                                    <li><a href="#">Scoliosis</a></li>
+                                    <li><a href="#">Spinal Stenosis</a></li>
+                                    <li><a href="#">Herniated Disc</a></li>
+                                    <li><a href="#">Sciatica</a></li>
+                                    <li><a href="#">Rotator Cuff</a></li>
+                                    <li><a href="#">Whiplash</a></li>
+                                    <li><a href="#">Education</a>
+                                        <ul>
+                                            <li><a href="#">Root Causes of Back Pain - Back and Neck Pain,
+                                                <br />
+                                                healthy lifestyle, a healthy spine</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Am I a candidate</a>
+                                <ul>
+                                    <li><a href="#">KKT and You</a></li>
+                                    <li><a href="#">Case Studies</a></li>
+                                    <li><a href="#">Testimonials</a></li>
+                                    <li><a href="#">Our Community Commitments</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="page-content">
+        <div class="content-wrapper">
+            @RenderBody()
+        </div>
+    </section>
+
+    <section id="footer">
+        <div class="container">
+            <div class="footer-content">
+
+                <div class="footer-contact-us">
+                    <h3>Contact Us</h3>
+                    <p>1st Floor Al Ghanim Commercial Building</p>
+                    <p>Rawdat Al Khalil, Al Muntazah, Salwa Road</p>
+                    <p>Doha, Qatar</p>
+                    <p>P. O. Box 11131</p>
+                    <p>Phone: (+974)</p>
+                    <p>44349800</p>
+                    <p>44349888</p>
+                    <p>33133385</p>
+                    <div class="footer-rights">
+                        <span>KKT Qatar 2016. All Rights Reserved.</span>
+                    </div>
+                </div>
+
+                <div class="footer-thing-of-past">
+                    <h3>Make pain a thing of the past</h3>
+                </div>
+                <div class="footer-social-media">
+                    <h3>We are on social media</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @RenderSection("scripts", required: false)
+</body>
+</html>
